@@ -58,6 +58,7 @@ stdenv.mkDerivation rec {
       catch2_src = catch2.src;
     })
     ./include.patch
+    ./cmake-pkg-config.patch
   ];
 
   nativeBuildInputs = [ cmake pkg-config ];
