@@ -29,6 +29,11 @@ stdenv.mkDerivation rec {
     hash = "sha256-zXUwTG8cqAkY5MC1jAc2TtMgNMQPLc5nc22okVYP4ME=";
   };
 
+  patches = [
+    # Support Mapnik >= v4.0.0 (boost:optional no longer used)
+    ./mod_tile-std_optional.patch
+  ];
+
   nativeBuildInputs = [
     cmake
     pkg-config
